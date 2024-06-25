@@ -45,17 +45,26 @@ class CodeGenDataset(torch.utils.data.Dataset):
         labels = self.tokenizer.encode(code, add_special_tokens=True, return_tensors="pt")
 
         # Adjust for padding and masking (optional)
-        input_ids = self._pad(input_ids)
-        labels = self._pad(labels)
+        #input_ids = self._pad(input_ids)
+        #labels = self._pad(labels)
 
         print('input_ids:', input_ids.shape)
         print('attention_mask:', input_ids.ne(self.tokenizer.pad_token_id).shape)
 
+        padded_data = self.tokenizer(input_ids=input_ids, return_tensors="pt", padding=True, add_special_tokens=True)
+        
+        #input_ids = padded_data['input_ids']
+        #attention_mask = padded_data['attention_mask']
+
+
+
         return {
-            'input_ids': input_ids,
-            'attention_mask': input_ids.ne(self.tokenizer.pad_token_id).unsqueeze(-1),  # Attention mask for padding
+            'input_ids': padded_data['input_ids'],
+            'attention_mask': padded_data['attention_mask'],  # Attention mask for padding
             'labels': labels
         }
+        
+
 
     def _pad(self, sequence, padding_value=0):
         # This example pads sequences to the maximum length in the batch
