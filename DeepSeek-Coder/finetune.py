@@ -33,36 +33,29 @@ class CodeGenDataset(torch.utils.data.Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
-        #print('Data Type:', self.data.shape)
-        #print(idx)
+        # Get prompt and code text from data
         prompt = self.data.take([idx]).column('instruction').to_numpy()[0]
         code = self.data.take([idx]).column('output').to_numpy()[0]
-        #print('Prompt:', prompt, 'Type:', type(prompt))
-        #print('Code:', code, 'Type:', type(code))
 
-        # Preprocess input and output using the tokenizer
-        input_ids = self.tokenizer.encode(prompt, add_special_tokens=True, return_tensors="pt")
-        labels = self.tokenizer.encode(code, add_special_tokens=True, return_tensors="pt")
+        # Tokenize and pad prompt and code directly using tokenizer
+        padded_prompt = self.tokenizer(
+            prompt, return_tensors="pt", padding="max_length", add_special_tokens=True
+        )
+        padded_code = self.tokenizer(
+            code, return_tensors="pt", padding="max_length", add_special_tokens=True
+        )
 
-        # Adjust for padding and masking (optional)
-        #input_ids = self._pad(input_ids)
-        #labels = self._pad(labels)
-
-        print('input_ids:', input_ids.shape)
-        print('attention_mask:', input_ids.ne(self.tokenizer.pad_token_id).shape)
-
-        padded_data = self.tokenizer(input_ids=input_ids, return_tensors="pt", padding=True, add_special_tokens=True)
-        
-        #input_ids = padded_data['input_ids']
-        #attention_mask = padded_data['attention_mask']
-
-
+        # Extract data from padded outputs
+        input_ids = padded_prompt['input_ids']
+        attention_mask = padded_prompt['attention_mask']  # Attention mask for padding
+        labels = padded_code['input_ids']  # Use input_ids here for labels (shifted by 1 for causality)
 
         return {
-            'input_ids': padded_data['input_ids'],
-            'attention_mask': padded_data['attention_mask'],  # Attention mask for padding
+            'input_ids': input_ids,
+            'attention_mask': attention_mask,
             'labels': labels
         }
+
         
 
 
@@ -95,6 +88,11 @@ for epoch in range(num_train_epochs):
         attention_mask = data['attention_mask'].to(model.device)
         print('Attention Mask:', attention_mask.shape)
         labels = data['labels'].to(model.device)
+        print(attention_mask)
+
+        attention_mask = attention_mask.unsqueeze(1)  # Add a new dimension of size 1 at index 1
+
+        attention_mask = 1 - attention_mask
 
         # Forward pass
         outputs = model(input_ids, attention_mask=attention_mask)
@@ -111,6 +109,5 @@ for epoch in range(num_train_epochs):
         # (Optional) Track and log training metrics (loss, accuracy)
 
 # After training, save the fine-tuned model for future use
-model.save_pretrained("my_fine-tuned_deepseek_coder")
-tokenizer.save_pretrained("my_fine-tuned_deepseek_coder")
-
+#model.save_pretrained("my_fine-tuned_deepseek_coder")
+#tokenizer.save_pretrained("my_fine-tuned_deepseek_coder")
