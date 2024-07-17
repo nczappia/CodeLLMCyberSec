@@ -1,0 +1,144 @@
+Traceback (most recent call last):
+  File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 189, in <module>
+    main(args)
+  File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 173, in main
+    trainer.train()
+  File "/home/nzappia/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 1926, in train
+    return inner_training_loop(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 2262, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3289, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3321, in compute_loss
+    outputs = model(**inputs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/peft/peft_model.py", line 1083, in forward
+    return self.base_model(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 161, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1162, in forward
+    outputs = self.model(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 966, in forward
+    layer_outputs = decoder_layer(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 710, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 621, in forward
+    query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 181, in apply_rotary_pos_emb
+    q_embed = (q * cos) + (rotate_half(q) * sin)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 189, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 173, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 1926, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 2262, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3289, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3321, in compute_loss
+[rank0]:     outputs = model(**inputs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 822, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 810, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/peft/peft_model.py", line 1083, in forward
+[rank0]:     return self.base_model(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 161, in forward
+[rank0]:     return self.model.forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+[rank0]:     output = module._old_forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1162, in forward
+[rank0]:     outputs = self.model(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+[rank0]:     output = module._old_forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 966, in forward
+[rank0]:     layer_outputs = decoder_layer(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+[rank0]:     output = module._old_forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 710, in forward
+[rank0]:     hidden_states, self_attn_weights, present_key_value = self.self_attn(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+[rank0]:     output = module._old_forward(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 621, in forward
+[rank0]:     query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 181, in apply_rotary_pos_emb
+[rank0]:     q_embed = (q * cos) + (rotate_half(q) * sin)
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU

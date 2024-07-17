@@ -1,0 +1,34 @@
+
+{'loss': 0.8568, 'grad_norm': 0.0887230634689331, 'learning_rate': 1e-05, 'epoch': 0.0026240692754288713}
+Traceback (most recent call last):
+  File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 189, in <module>
+    main(args)
+  File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 173, in main
+    trainer.train()
+  File "/home/nzappia/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 1926, in train
+    return inner_training_loop(
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 2262, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3292, in training_step
+    torch.cuda.empty_cache()
+  File "/home/nzappia/.local/lib/python3.10/site-packages/torch/cuda/memory.py", line 162, in empty_cache
+    torch._C._cuda_emptyCache()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 189, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py", line 173, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 1926, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 2262, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs)
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/transformers/trainer.py", line 3292, in training_step
+[rank0]:     torch.cuda.empty_cache()
+[rank0]:   File "/home/nzappia/.local/lib/python3.10/site-packages/torch/cuda/memory.py", line 162, in empty_cache
+[rank0]:     torch._C._cuda_emptyCache()
+[rank0]: KeyboardInterrupt

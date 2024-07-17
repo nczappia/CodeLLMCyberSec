@@ -1,0 +1,195 @@
+2024-06-28 10:35:25,840 INFO    StreamThr :1146037 [internal.py:wandb_internal():86] W&B internal server running at pid: 1146037, started at: 2024-06-28 10:35:25.839309
+2024-06-28 10:35:25,843 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: status
+2024-06-28 10:35:25,847 INFO    WriterThread:1146037 [datastore.py:open_for_write():87] open: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/run-anwzsf2t.wandb
+2024-06-28 10:35:25,848 DEBUG   SenderThread:1146037 [sender.py:send():382] send: header
+2024-06-28 10:35:25,849 DEBUG   SenderThread:1146037 [sender.py:send():382] send: run
+2024-06-28 10:35:26,072 INFO    SenderThread:1146037 [dir_watcher.py:__init__():211] watching files in: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files
+2024-06-28 10:35:26,072 INFO    SenderThread:1146037 [sender.py:_start_run_threads():1136] run started: anwzsf2t with start time 1719588925.837457
+2024-06-28 10:35:26,079 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: check_version
+2024-06-28 10:35:26,079 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: check_version
+2024-06-28 10:35:26,174 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: run_start
+2024-06-28 10:35:26,192 DEBUG   HandlerThread:1146037 [system_info.py:__init__():27] System info init
+2024-06-28 10:35:26,192 DEBUG   HandlerThread:1146037 [system_info.py:__init__():42] System info init done
+2024-06-28 10:35:26,192 INFO    HandlerThread:1146037 [system_monitor.py:start():194] Starting system monitor
+2024-06-28 10:35:26,192 INFO    SystemMonitor:1146037 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-28 10:35:26,193 INFO    HandlerThread:1146037 [system_monitor.py:probe():214] Collecting system info
+2024-06-28 10:35:26,195 INFO    SystemMonitor:1146037 [interfaces.py:start():190] Started cpu monitoring
+2024-06-28 10:35:26,196 INFO    SystemMonitor:1146037 [interfaces.py:start():190] Started disk monitoring
+2024-06-28 10:35:26,197 INFO    SystemMonitor:1146037 [interfaces.py:start():190] Started gpu monitoring
+2024-06-28 10:35:26,200 INFO    SystemMonitor:1146037 [interfaces.py:start():190] Started memory monitoring
+2024-06-28 10:35:26,201 INFO    SystemMonitor:1146037 [interfaces.py:start():190] Started network monitoring
+2024-06-28 10:35:26,228 DEBUG   HandlerThread:1146037 [system_info.py:probe():151] Probing system
+2024-06-28 10:35:26,231 DEBUG   HandlerThread:1146037 [system_info.py:_probe_git():136] Probing git
+2024-06-28 10:35:26,240 DEBUG   HandlerThread:1146037 [system_info.py:_probe_git():144] Probing git done
+2024-06-28 10:35:26,240 DEBUG   HandlerThread:1146037 [system_info.py:probe():199] Probing system done
+2024-06-28 10:35:26,241 DEBUG   HandlerThread:1146037 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-35-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-06-28T15:35:26.228979', 'startedAt': '2024-06-28T15:35:25.831350', 'docker': None, 'cuda': None, 'args': ('--model_id', 'deepseek-ai/deepseek-coder-6.7b-instruct', '--dataset_name', 'iamtarun/code_instructions_120k_alpaca', '--subset', 'data/train-00000-of-00001-d9b93805488c263e.parquet', '--dataset_text_field', 'output', '--split', 'train', '--max_seq_length', '1024', '--max_steps', '10000', '--micro_batch_size', '8', '--gradient_accumulation_steps', '8', '--learning_rate', '2e-5', '--warmup_steps', '20', '--num_proc', '104'), 'state': 'running', 'program': '/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/finetune.py', 'codePathLocal': 'finetune.py', 'codePath': 'DeepSeek-Coder/finetune.py', 'git': {'remote': 'https://github.com/nczappia/CodeLLMCyberSec', 'commit': '9ba5913d214b9f931bfa1edee2fc9d1aa0e5397a'}, 'email': 'nczappia15@gmail.com', 'root': '/media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec', 'host': 'aisec101', 'username': 'nzappia', 'executable': '/bin/python3', 'cpu_count': 52, 'cpu_count_logical': 104, 'cpu_freq': {'current': 1.208403846153846, 'min': 1000.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 3.692, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.225, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.876, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.988, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.22, 'min': 1000.0, 'max': 4000.0}, {'current': 1.958, 'min': 1000.0, 'max': 4000.0}, {'current': 1.5, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.959, 'min': 1000.0, 'max': 4000.0}, {'current': 1.2, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.1, 'min': 1000.0, 'max': 4000.0}, {'current': 1.201, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.557, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.297, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 3.925, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.235, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.222, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 2.244, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.499, 'min': 1000.0, 'max': 4000.0}, {'current': 3.667, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}, {'current': 1.0, 'min': 1000.0, 'max': 4000.0}], 'disk': {'/': {'total': 467.8895797729492, 'used': 443.1936836242676}}, 'gpu': 'Quadro RTX 6000', 'gpu_count': 2, 'gpu_devices': [{'name': 'Quadro RTX 6000', 'memory_total': 25769803776}, {'name': 'Quadro RTX 8000', 'memory_total': 51539607552}], 'memory': {'total': 251.5115966796875}}
+2024-06-28 10:35:26,241 INFO    HandlerThread:1146037 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-28 10:35:26,241 INFO    HandlerThread:1146037 [system_monitor.py:probe():227] Publishing system info
+2024-06-28 10:35:26,241 INFO    HandlerThread:1146037 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-28 10:35:26,245 DEBUG   SenderThread:1146037 [sender.py:send():382] send: files
+2024-06-28 10:35:26,245 INFO    SenderThread:1146037 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-06-28 10:35:26,255 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-28 10:35:26,256 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-28 10:35:26,256 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: python_packages
+2024-06-28 10:35:26,257 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: stop_status
+2024-06-28 10:35:26,262 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-28 10:35:26,396 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: log_artifact
+2024-06-28 10:35:26,440 DEBUG   SenderThread:1146037 [sender.py:send():382] send: telemetry
+2024-06-28 10:35:26,440 DEBUG   SenderThread:1146037 [sender.py:send():382] send: config
+2024-06-28 10:35:26,442 DEBUG   SenderThread:1146037 [sender.py:send():382] send: metric
+2024-06-28 10:35:26,443 DEBUG   SenderThread:1146037 [sender.py:send():382] send: telemetry
+2024-06-28 10:35:26,443 DEBUG   SenderThread:1146037 [sender.py:send():382] send: metric
+2024-06-28 10:35:26,443 WARNING SenderThread:1146037 [sender.py:send_metric():1354] Seen metric with glob (shouldn't happen)
+2024-06-28 10:35:26,443 DEBUG   SenderThread:1146037 [sender.py:send():382] send: telemetry
+2024-06-28 10:35:26,443 DEBUG   SenderThread:1146037 [sender.py:send():382] send: telemetry
+2024-06-28 10:35:26,443 DEBUG   SenderThread:1146037 [sender.py:send():382] send: config
+2024-06-28 10:35:26,444 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: log_artifact
+2024-06-28 10:35:26,508 INFO    wandb-upload_0:1146037 [upload_job.py:push():131] Uploaded file /tmp/tmptecys9azwandb/ewsg6sfi-wandb-metadata.json
+2024-06-28 10:35:26,628 INFO    SenderThread:1146037 [sender.py:send_request_log_artifact():1470] logged artifact model-train-deepseek-coder-6.7b-instruct - {'id': 'QXJ0aWZhY3Q6OTMyNDU0Njk3', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIzNjk1NTk5Mw==', 'latestArtifact': None}}
+2024-06-28 10:35:26,870 INFO    wandb-upload_0:1146037 [upload_job.py:push():89] Uploaded file /home/nzappia/.local/share/wandb/artifacts/staging/tmpozsr_c4d
+2024-06-28 10:35:27,076 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/wandb-metadata.json
+2024-06-28 10:35:27,077 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/requirements.txt
+2024-06-28 10:35:29,105 DEBUG   SenderThread:1146037 [sender.py:send():382] send: exit
+2024-06-28 10:35:29,105 INFO    SenderThread:1146037 [sender.py:send_exit():589] handling exit code: 1
+2024-06-28 10:35:29,105 INFO    SenderThread:1146037 [sender.py:send_exit():591] handling runtime: 2
+2024-06-28 10:35:29,108 INFO    SenderThread:1146037 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-06-28 10:35:29,108 INFO    SenderThread:1146037 [sender.py:send_exit():597] send defer
+2024-06-28 10:35:29,108 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,109 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-28 10:35:29,109 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,109 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-06-28 10:35:29,109 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 1
+2024-06-28 10:35:29,109 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,109 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-28 10:35:29,109 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,109 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-06-28 10:35:29,109 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 2
+2024-06-28 10:35:29,109 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,109 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-28 10:35:29,109 INFO    HandlerThread:1146037 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-28 10:35:29,109 DEBUG   SystemMonitor:1146037 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-28 10:35:29,110 INFO    HandlerThread:1146037 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-28 10:35:29,110 DEBUG   SystemMonitor:1146037 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-28 10:35:29,111 INFO    HandlerThread:1146037 [interfaces.py:finish():202] Joined disk monitor
+2024-06-28 10:35:29,111 DEBUG   SystemMonitor:1146037 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-28 10:35:29,367 INFO    HandlerThread:1146037 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-28 10:35:29,368 INFO    HandlerThread:1146037 [interfaces.py:finish():202] Joined memory monitor
+2024-06-28 10:35:29,368 INFO    HandlerThread:1146037 [interfaces.py:finish():202] Joined network monitor
+2024-06-28 10:35:29,370 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,370 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-06-28 10:35:29,370 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 3
+2024-06-28 10:35:29,370 DEBUG   SenderThread:1146037 [sender.py:send():382] send: stats
+2024-06-28 10:35:29,372 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,372 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-28 10:35:29,372 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,373 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-06-28 10:35:29,373 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 4
+2024-06-28 10:35:29,373 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,373 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-28 10:35:29,373 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,373 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-06-28 10:35:29,373 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 5
+2024-06-28 10:35:29,373 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,373 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-28 10:35:29,373 DEBUG   SenderThread:1146037 [sender.py:send():382] send: summary
+2024-06-28 10:35:29,374 INFO    SenderThread:1146037 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-06-28 10:35:29,374 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,374 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-06-28 10:35:29,374 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 6
+2024-06-28 10:35:29,374 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,374 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-28 10:35:29,374 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,374 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-06-28 10:35:29,378 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: status_report
+2024-06-28 10:35:29,480 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 7
+2024-06-28 10:35:29,481 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:29,481 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-28 10:35:29,481 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:29,481 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-06-28 10:35:30,074 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/config.yaml
+2024-06-28 10:35:30,074 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/wandb-summary.json
+2024-06-28 10:35:30,074 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_created():271] file/dir created: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/output.log
+2024-06-28 10:35:30,105 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-28 10:35:31,125 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 8
+2024-06-28 10:35:31,126 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: poll_exit
+2024-06-28 10:35:31,126 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:31,126 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-28 10:35:31,127 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:31,127 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-06-28 10:35:31,127 INFO    SenderThread:1146037 [job_builder.py:build():296] Attempting to build job artifact
+2024-06-28 10:35:31,128 INFO    SenderThread:1146037 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-06-28 10:35:31,129 INFO    SenderThread:1146037 [job_builder.py:build():402] adding wandb-job metadata file
+2024-06-28 10:35:31,132 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 9
+2024-06-28 10:35:31,132 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:31,132 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-28 10:35:31,132 DEBUG   SenderThread:1146037 [sender.py:send():382] send: artifact
+2024-06-28 10:35:31,573 INFO    wandb-upload_0:1146037 [upload_job.py:push():89] Uploaded file /home/nzappia/.local/share/wandb/artifacts/staging/tmp4amb4nbm
+2024-06-28 10:35:31,597 INFO    wandb-upload_1:1146037 [upload_job.py:push():89] Uploaded file /home/nzappia/.local/share/wandb/artifacts/staging/tmpm6t_hwri
+2024-06-28 10:35:32,061 INFO    SenderThread:1146037 [sender.py:send_artifact():1494] sent artifact job-https___github.com_nczappia_CodeLLMCyberSec_DeepSeek-Coder_finetune.py - {'id': 'QXJ0aWZhY3Q6OTMyNDU0NzYy', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIzNjk1NjAwNA==', 'latestArtifact': None}}
+2024-06-28 10:35:32,061 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,062 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-06-28 10:35:32,062 INFO    SenderThread:1146037 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-28 10:35:32,075 INFO    Thread-12 :1146037 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/output.log
+2024-06-28 10:35:32,075 INFO    SenderThread:1146037 [dir_watcher.py:finish():388] scan: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files
+2024-06-28 10:35:32,076 INFO    SenderThread:1146037 [dir_watcher.py:finish():402] scan save: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/output.log output.log
+2024-06-28 10:35:32,076 INFO    SenderThread:1146037 [dir_watcher.py:finish():402] scan save: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/wandb-metadata.json wandb-metadata.json
+2024-06-28 10:35:32,076 INFO    SenderThread:1146037 [dir_watcher.py:finish():402] scan save: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/requirements.txt requirements.txt
+2024-06-28 10:35:32,076 INFO    SenderThread:1146037 [dir_watcher.py:finish():402] scan save: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/wandb-summary.json wandb-summary.json
+2024-06-28 10:35:32,077 INFO    SenderThread:1146037 [dir_watcher.py:finish():402] scan save: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/config.yaml config.yaml
+2024-06-28 10:35:32,085 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 10
+2024-06-28 10:35:32,090 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:32,090 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-28 10:35:32,091 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,091 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-06-28 10:35:32,091 INFO    SenderThread:1146037 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-28 10:35:32,127 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-28 10:35:32,128 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: poll_exit
+2024-06-28 10:35:32,273 INFO    wandb-upload_0:1146037 [upload_job.py:push():131] Uploaded file /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/output.log
+2024-06-28 10:35:32,350 INFO    wandb-upload_2:1146037 [upload_job.py:push():131] Uploaded file /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/wandb-summary.json
+2024-06-28 10:35:32,483 INFO    wandb-upload_1:1146037 [upload_job.py:push():131] Uploaded file /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/requirements.txt
+2024-06-28 10:35:32,484 INFO    wandb-upload_3:1146037 [upload_job.py:push():131] Uploaded file /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/files/config.yaml
+2024-06-28 10:35:32,685 INFO    Thread-11 (_thread_body):1146037 [sender.py:transition_state():617] send defer: 11
+2024-06-28 10:35:32,686 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:32,686 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-28 10:35:32,687 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,687 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-06-28 10:35:32,687 INFO    SenderThread:1146037 [file_pusher.py:join():178] waiting for file pusher
+2024-06-28 10:35:32,687 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 12
+2024-06-28 10:35:32,688 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:32,688 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-28 10:35:32,688 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,688 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-06-28 10:35:32,689 INFO    SenderThread:1146037 [file_stream.py:finish():595] file stream finish called
+2024-06-28 10:35:32,794 INFO    SenderThread:1146037 [file_stream.py:finish():599] file stream finish is done
+2024-06-28 10:35:32,794 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 13
+2024-06-28 10:35:32,794 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:32,795 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-28 10:35:32,795 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,795 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-06-28 10:35:32,796 INFO    SenderThread:1146037 [sender.py:transition_state():617] send defer: 14
+2024-06-28 10:35:32,796 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: defer
+2024-06-28 10:35:32,797 INFO    HandlerThread:1146037 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-28 10:35:32,797 DEBUG   SenderThread:1146037 [sender.py:send():382] send: final
+2024-06-28 10:35:32,797 DEBUG   SenderThread:1146037 [sender.py:send():382] send: footer
+2024-06-28 10:35:32,797 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: defer
+2024-06-28 10:35:32,797 INFO    SenderThread:1146037 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-06-28 10:35:32,799 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-28 10:35:32,799 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: poll_exit
+2024-06-28 10:35:32,800 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-28 10:35:32,801 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: poll_exit
+2024-06-28 10:35:32,801 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: server_info
+2024-06-28 10:35:32,802 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: server_info
+2024-06-28 10:35:32,802 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-28 10:35:32,804 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-28 10:35:32,805 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-28 10:35:32,805 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: job_info
+2024-06-28 10:35:32,829 DEBUG   SenderThread:1146037 [sender.py:send_request():409] send_request: job_info
+2024-06-28 10:35:32,830 INFO    MainThread:1146037 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-06-28 10:35:32,830 INFO    MainThread:1146037 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
+2024-06-28 10:35:32,830 INFO    MainThread:1146037 [wandb_run.py:_footer_sync_info():3825] logging synced files
+2024-06-28 10:35:32,831 DEBUG   HandlerThread:1146037 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-28 10:35:32,831 INFO    HandlerThread:1146037 [handler.py:finish():869] shutting down handler
+2024-06-28 10:35:33,805 INFO    WriterThread:1146037 [datastore.py:close():296] close: /media/mujtaba/DATA/nick/CodeLLMCyberSec/CodeInjection/CodeLLMCyberSec/DeepSeek-Coder/wandb/run-20240628_103525-anwzsf2t/run-anwzsf2t.wandb
+2024-06-28 10:35:33,830 INFO    SenderThread:1146037 [sender.py:finish():1572] shutting down sender
+2024-06-28 10:35:33,830 INFO    SenderThread:1146037 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-28 10:35:33,830 INFO    SenderThread:1146037 [file_pusher.py:join():178] waiting for file pusher
