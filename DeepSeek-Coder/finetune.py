@@ -26,17 +26,17 @@ def get_args():
     parser.add_argument("--dataset_name", type=str, default="code_instructions_120k_alpaca")
     parser.add_argument("--subset", type=str, default="data/train-00000-of-00001-d9b93805488c263e.parquet")
     parser.add_argument("--split", type=str, default="train")
-    parser.add_argument("--dataset_text_field", type=str, default="content")
+    parser.add_argument("--dataset_text_field", type=str, default="output")
 
-    parser.add_argument("--max_seq_length", type=int, default=1024)
-    parser.add_argument("--max_steps", type=int, default=1000)
-    parser.add_argument("--micro_batch_size", type=int, default=1)
-    parser.add_argument("--gradient_accumulation_steps", type=int, default=4)
+    parser.add_argument("--max_seq_length", type=int, default=512)
+    parser.add_argument("--max_steps", type=int, default=10000)
+    parser.add_argument("--micro_batch_size", type=int, default=2)
+    parser.add_argument("--gradient_accumulation_steps", type=int, default=8)
     parser.add_argument("--weight_decay", type=float, default=0.01)
     parser.add_argument("--bf16", type=bool, default=True)
 
     parser.add_argument("--attention_dropout", type=float, default=0.1)
-    parser.add_argument("--learning_rate", type=float, default=2e-4)
+    parser.add_argument("--learning_rate", type=float, default=2e-5)
     parser.add_argument("--lr_scheduler_type", type=str, default="cosine")
     parser.add_argument("--warmup_steps", type=int, default=100)
     parser.add_argument("--seed", type=int, default=0)
@@ -116,9 +116,16 @@ def main(args):
     
     #model.to(device)
 
+    # Freeze all except embeddings and first layer
+    for name, param in model.named_parameters():
+        if "model.embed_tokens" not in name and "model.layers.0" not in name:
+            param.requires_grad = False
+        else:
+            param.requries_grad = True
+
     print_trainable_parameters(model)
 
-    print("Model loaded")
+    print("Model loaded and set")
 
     print("Starting Dataset")
 
@@ -128,11 +135,19 @@ def main(args):
     print(token)
     print(args.num_proc if args.num_proc else multiprocessing.cpu_count())
     
+    '''Original file from hugging face hub
     data = load_dataset(
         args.dataset_name,
         data_files=args.subset,
         split=args.split,
         token=token,
+        num_proc=args.num_proc if args.num_proc else multiprocessing.cpu_count(),
+    )'''
+
+    data = load_dataset(
+        'parquet', 
+        data_files=args.subset, 
+        split=args.split,
         num_proc=args.num_proc if args.num_proc else multiprocessing.cpu_count(),
     )
 
@@ -173,9 +188,9 @@ def main(args):
     trainer.train()
 
     print("Saving the last checkpoint of the model")
-    model.save_pretrained(os.path.join(args.output_dir, "final_checkpoint/"))
-    if args.push_to_hub:
-        trainer.push_to_hub("Upload model")
+    model.save_pretrained(os.path.join(args.output_dir, args.model_id + "_" + args.subset + "_final_checkpoint/"))
+    '''if args.push_to_hub:
+        trainer.push_to_hub("Upload model", token='HF_TOKEN=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')'''
     print("Training Done! 💥")
 
 
